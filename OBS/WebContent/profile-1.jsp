@@ -13,12 +13,13 @@
 <div class="container-fluid">
 	<div class="row" style="height:160px;background:url(img/bg1.jpg);background-size:100% 300%;background-repeat:no-repeat;">
 		<div class="col-md-3">
-			<a href="">
+			<a href="account.jsp">
 				<img src="img/logo1.png" width=300 height=120>
 			</a>
 		</div>
 		<div class="col-md-9" style="padding-top:10px">
 			<ul class="nav nav-pills" style="float:right">
+				<li class="active"><a style="color:#117ACA;border-color:#117ACA;"><img src="img/chat.png" width=20 height=20> Chat Online</a></li>
 				<li class="active" style="background-color:transparent;"><a href="index.jsp">Sign off</a></li>
 				<li class="active"><a href="#">Language</a></li>
 			</ul>
@@ -59,11 +60,9 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:1030px">
                 <ul class='list-inline'>
-                    <li><a href="#" id="">Pay bill</a>
+                    <li><a href="PayBillIndex.jsp" id="">Pay bill</a>
                     </li>
-                    <li><a href="#" id="">Manage bill</a>
-                    </li>
-                    <li><a href="#" id="">Payment Activity</a>
+                    <li><a href="ManageBillIndex.jsp" id="">Manage bill</a>
                     </li>
                 </ul>
 		</ul>
@@ -75,7 +74,7 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:860px">
                 <ul class='list-inline'>
-                    <li><a href="AutoApply1.jsp" id="">Auto Loan</a>
+                    <li><a href="LoanAccount.jsp" id="">Auto Loan</a>
                     </li>
                     <li><a href="#" id="">Mortgage</a>
                     </li>
@@ -110,7 +109,7 @@
 	  	<div class="panel-body" style="padding:0">
 	    	<table class="table table-bordered table-hover" >
 	    		<tr>
-	    			<th style="background-color:rgb(233,229,220)">Customer Address<span style="float:right"><a>Edit</a></span></th>
+	    			<th style="background-color:rgb(233,229,220)">Customer Address<span style="float:right"><a href="profile-1-address.jsp">Edit</a></span></th>
 	    		</tr>
 	    		<tr>
 	    			<th>XXX XXX<br>1234 Forbes Ave<br>Pittsburgh PA, 15213</th>

@@ -3,11 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Confirm Address</title>	
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<title>Home Page</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -97,36 +97,44 @@
 	  <li><a href="alert.jsp">Alert and Notification</a></li>
 	</ul>
 </div>
-<div class="transfer" style="margin-left:30px">
-	<p style="padding-top:10px"><span class="caret"></span> PAYMENT INFORMATION</p>
-		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
-				<div class="form-group">
-					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Send Date</label>
-					<input type="date" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Delivery</label>					
-					<input type="text" class="form-control" value="Standard Delivery (Tuesday, 11/21/2017) - Free" readonly="readonly"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Pay From</label>
-					<select class="form-control" style="padding-left:50px;">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Message</label>
-					<input type="text" class="form-control"/>
-					<br>
-					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_exter_transfer.jsp'">Next Step</button>
-					<br>				
-					<br>
-				</div>
-			</form>
-		</div>
+<div class="container">
+	<div style="height:30px">
+		<p style="font-size:20px;padding-top:5px;padding-left:30px"><a href="profile-1.jsp">Personal Settings</a></p>
+	</div>
+	<br>
+	<div class="panel panel-info" style="margin-left:2em;width:100%;float:left">
+	  	<div class="panel-heading">
+	    	<p class="panel-title" style="font-size:15px">New Address - Summary</p>
+	  	</div>
+	    <div class="panel-body" style="padding:0;">
+	    	<table class="table table-bordered table-hover" >
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>Street Address:</th> 
+	    			<th>1234 Forbes Ave</th>
+	    		</tr>
+	    		<tr>
+	    			<th>PO Box: or C/O(If needed): </th>
+	    			<th>None</th>
+	    		</tr>
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>City: </th>
+	    			<th>Pittsburgh</th>
+	    		</tr>
+	    		<tr>
+	    			<th>State: </th>
+	    			<th>Pennsylvania</th>
+	    		</tr>
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>Zip: </th>
+	    			<th>15213</th>
+	    		</tr>
+	    	</table>
+	    	<button class="btn btn-info" style="margin-left:20px;width:100px">Submit</button> | <a href="profile-1-address.jsp">Back</a>
+	    	<br>
+	    	<br>
+	  	</div>
+	</div>
 </div>
-
 <div class="container:fluid" style="background-color:rgb(245,245,245)">
 	<br>
 	<div style="text-align:center">

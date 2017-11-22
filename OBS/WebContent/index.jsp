@@ -34,7 +34,7 @@
 		    	<button type="button" class="btn btn-info" onClick="{location.href='account.jsp'}">Sign On</button>
 		    	<br>
 		    	Enroll in Online Banking:<br>
-		    	<a href="#">New User Registration</a>
+		    	<a href="register_step1.jsp">New User Registration</a>
 		    	<br>
 		  	</div>
 		</div>

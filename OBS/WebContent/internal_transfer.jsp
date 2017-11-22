@@ -13,12 +13,13 @@
 <div class="container-fluid">
 	<div class="row" style="height:160px;background:url(img/bg1.jpg);background-size:100% 300%;background-repeat:no-repeat;">
 		<div class="col-md-3">
-			<a href="">
+			<a href="account.jsp">
 				<img src="img/logo1.png" width=300 height=120>
 			</a>
 		</div>
 		<div class="col-md-9" style="padding-top:10px">
 			<ul class="nav nav-pills" style="float:right">
+				<li class="active"><a style="color:#117ACA;border-color:#117ACA;"><img src="img/chat.png" width=20 height=20> Chat Online</a></li>
 				<li class="active" style="background-color:transparent;"><a href="index.jsp">Sign off</a></li>
 				<li class="active"><a href="#">Language</a></li>
 			</ul>
@@ -59,11 +60,9 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:1030px">
                 <ul class='list-inline'>
-                    <li><a href="#" id="">Pay bill</a>
+                    <li><a href="PayBillIndex.jsp" id="">Pay bill</a>
                     </li>
-                    <li><a href="#" id="">Manage bill</a>
-                    </li>
-                    <li><a href="#" id="">Payment Activity</a>
+                    <li><a href="ManageBillIndex.jsp" id="">Manage bill</a>
                     </li>
                 </ul>
 		</ul>
@@ -75,7 +74,7 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:860px">
                 <ul class='list-inline'>
-                    <li><a href="AutoApply1.jsp" id="">Auto Loan</a>
+                    <li><a href="LoanAccount.jsp" id="">Auto Loan</a>
                     </li>
                     <li><a href="#" id="">Mortgage</a>
                     </li>
@@ -121,12 +120,12 @@
 						<option>Annually</option>
 					</select>
 					<label for="name" style="font-size:18px;padding-top:10px">Date</label>
-					<input type="number" class="form-control"/>
+					<input type="date" class="form-control"/>
 					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="number" class="form-control"/>
+					<input type="text" class="form-control"/>
 					<br>
-					<button class="btn btn-default" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-default" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_inter_transfer.jsp'">Next Step</button>
+					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
+					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_inter_transfer.jsp'">Next Step</button>
 					<br>				
 					<br>
 				</div>

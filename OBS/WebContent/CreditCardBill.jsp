@@ -7,7 +7,65 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<title>Deposit Check</title>
+	<title>Credit Card Bill</title>
+	<style>
+	@import
+		url('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+	#sidebar-wrapper .sidebar-nav {
+		position: absolute;
+		top: 0;
+		width: 95%;
+		font-size: 14px;
+		padding-left:0;
+		padding-top: 10%;
+		list-style: none;
+	}
+
+	.sidebar-nav li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+		background: #428bca !important;
+		color: #fff !important;
+	}
+
+	#sidebar-wrapper .sidebar-nav li a {
+		display: block;
+		text-decoration: none;
+		color: #428bca;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse {
+		list-style: none;
+		-moz-padding-start: 0;
+		-webkit-padding-start: 0;
+		-khtml-padding-start: 0;
+		-o-padding-start: 0;
+		padding-start: 0;
+		padding: 0;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse li i {
+		margin-right: 10px;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse li {
+		text-indent: 15px;
+	}
+
+	.sidebar-nav li a.active {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+	.sidebaar-nav li a:hover:not (.active) {
+		background-color: #555;
+		color: white;
+	}
+	
+	</style>
 </head>
 <body>
 <div class="container-fluid">
@@ -97,59 +155,84 @@
 	  <li><a href="alert.jsp">Alert and Notification</a></li>
 	</ul>
 </div>
-<div class="container-fluid" style="background-color:#F5DEB3">
-	<div class="col-md-3" style="padding-left:0">
-		<p style="padding-top:10px"><span class="caret"></span> ACCOUNT BALANCE</p>
-		<div style="background-color:white;width:300px;border-top:solid;border-color:#117ACA">
-			<p>CHECKING ACCOUNT (....XXXX)</p>
-			<p style="margin-bottom:0;text-align:right;font-size:30px;color:#117ACA">$3000.00</p>
-			<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
-		</div>
-		<div style="background-color:rgb(240,235,232);width:300px;">
-			<p>SAVING ACCOUNT (....XXXX)</p>
-			<p style="margin-bottom:0;text-align:right;font-size:30px;">$8000.00</p>
-			<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
-		</div>
-	</div>	
+	<div class="container-fluid" style="background-color:#F5DEB3;">
+		<div class="col-md-3" style="padding-left:0">
+			<div id="sidebar-wrapper">
+				<ul id="sidemenu" class="sidebar-nav" style="width:95%">
+					<li><a href='RegularBill.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-newspaper-o"></i></span>
+						&nbsp;Pay Utility & Rent</span>
+						</a>
+					</li>
+					<li><a href='CreditCardBill.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-credit-card"></i></span>
+						&nbsp;Pay Credit Card Bill</span>
+						</a>
+					</li>
+					<li><a href='AutomaticBill.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-money"></i></span>
+						&nbsp;Automatic Bill Payment</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<p style="padding-top:50%"><span class="caret"></span> ACCOUNT BALANCE</p>
+			<div style="background-color:white;width:300px;border-top:solid;border-color:#117ACA">
+				<p>CHECKING ACCOUNT (....XXXX)</p>
+				<p style="margin-bottom:0;text-align:right;font-size:30px;color:#117ACA">$3000.00</p>
+				<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
+			</div>
+			<div style="background-color:rgb(240,235,232);width:300px;">
+				<p>SAVING ACCOUNT (....XXXX)</p>
+				<p style="margin-bottom:0;text-align:right;font-size:30px;">$8000.00</p>
+				<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
+			</div>		
+		</div>	
 	<div class="col-md-6">
-		<div>
-		<p style="padding-top:10px"><span class="caret"></span> DEPOSIT CHECKS
-		<span class="glyphicon glyphicon-info-sign"></span> Please check information on the right before depositing checks.</p>
-		</div>
+		<p style="padding-top:10px"><span class="caret"></span> PAY CREDIT CARD BILL</p>
 		<div style="background-color:white;border-top:solid;border-color:#117ACA">
 			<form>
 				<div class="form-group">
-					<label for="name" style="font-size:15px;padding-top:10px">&nbsp;Deposit To</label>
+					<label for="text" class="col-2 col-form-label" style="font-size:15px">&nbsp;Credit Card Number</label>
+  					<div class="col-10">
+    					<input class="form-control" type="text" id="CreditCardNo" style="margin-left:5px;width:98%">
+  					</div>
+  					<br>
+  					<label for="text" class="col-2 col-form-label" style="font-size:15px">
+  					&nbsp;Name on Card</label>
+  					<div class="col-10">
+    					<input class="form-control" type="text" id="CreditCardName" style="margin-left:5px;width:98%">
+  					</div>
+  					<br>
+  					<label for="text" class="col-2 col-form-label" style="font-size:15px">&nbsp;Credit Card's Issuing Bank</label>
+  					<div class="col-10">
+    					<input class="form-control" type="text" id="CreditCardBank" style="margin-left:5px;width:98%">
+  					</div>
+  					<br>
+  					<label for="text" class="col-2 col-form-label" style="font-size:15px">
+  					&nbsp;Credit Card's Issuing Bank Branch Address</label>
+  					<div class="col-10">
+    					<input class="form-control" type="text" id="CreditCardAdd" style="margin-left:5px;width:98%">
+  					</div>
+  					<br>
+					<label for="text" style="font-size:15px;">&nbsp;Payment Account</label>
 					<select class="form-control" style="margin-left:5px;width:98%">
 						<option>CHECKING ACCOUNT (....XXXX)</option>
 						<option>SAVING ACCOUNT (....XXXX)</option>
 					</select>
-					<label for="name" style="font-size:15px;padding-top:10px">&nbsp;Deposit Amount</label>
-					<input type="number" class="form-control" style="margin-left:5px;width:98%"/>
-					<label for="name" style="font-size:15px;padding-top:10px">&nbsp;Deposit Currency</label>
-					<select class="form-control" style="margin-left:5px;width:98%">
-						<option>$USD (US Dollar)</option>
-						<option>$CAD (Canada Dollar)</option>
-						<option>$MXN (Mexico Peso)</option>
-					</select>
-					<div class="form-group">
-    						<label for="file" style="font-size:15px;padding-top:10px">
-    						&nbsp;Please Upload the Front of Your Check</label>
-    						<input type="file" class="form-control-file" id="InputFile" aria-describedby="fileHelp"
-    						style="padding-left:1%;padding-bottom:1%;">
-    						<small id="fileHelp" class="form-text text-muted" style="padding-left:2%;">
-    						*Supported file format: pdf/jpeg/png only.</small>
-  					</div>
-  					<div class="form-group">
-    						<label for="file" style="font-size:15px;">
-    						&nbsp;Please Upload the Back of Your Check</label>
-    						<input type="file" class="form-control-file" id="InputFile" aria-describedby="fileHelp"
-    						style="padding-left:1%;padding-bottom:1%;">
-    						<small id="fileHelp" class="form-text text-muted" style="padding-left:2%;">
-    						*Supported file format: pdf/jpeg/png only.</small>
-  					</div>
 					<br>
-					<button class="btn btn-info" type="button" style="margin-left:10px;margin-right:10px;float:right;">Submit</button>
+					<label for="text" style="font-size:15px;">&nbsp;Payment Amount (in $USD)</label>
+					<input type="number" class="form-control" style="margin-left:5px;width:98%"/>
+					<br>
+					<label for="name" style="font-size:15px;">&nbsp;Scheduled Payment Date</label>
+					<input type="date" class="form-control" style="margin-left:5px;width:98%"/>
+					<br>
+					<br>
+					<button class="btn btn-info" type="button" style="margin-left:10px;margin-right:10px;float:right;"
+					onclick = "window.location.href = 'ReviewCreditCardBill.jsp'">Next Step</button>
 					<button class="btn btn-default" type="button" style="float:right;">Cancel</button>
 					<br>
 					<br>
@@ -158,18 +241,20 @@
 		</div>
 	</div>
 	<div class="col-md-3">
-		<p style="padding-top:10px;"><span class="caret"></span> INFORMATION FOR CHECK DEPOSITS</p>
-		<div style="background-color:white;width:300px;border-top:solid;border-color:#117ACA">
+	<p style="padding-top:10px;"><span class="caret"></span> Frequent Credit Card Accounts</p>
+		<div style="background-color:white;border-top:solid;border-color:#117ACA">
 			<br>
-			<p style="text-align: left;font-size:15px;margin-left:3px">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-			Deposit cutoff time is 9:00 p.m. pacific time.
-			Deposits made after 9:00 p.m. will be processed on the following day.</p>
-			<p style="text-align: left;font-size:15px;margin-left:3px">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-			Deposit limit: Today - $2,500</p>
-			<p style="text-align: left;font-size:15px;margin-left:3px">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-			Deposit limit: 30-Day - $50,000</p>
-			<p style="text-align: left;font-size:15px;margin-left:3px">&nbsp;<span class="glyphicon glyphicon-info-sign"></span>&nbsp;
-			Estimated check validation period: two working days</p>
+			<p style="text-align: left;font-size:15px;">&nbsp;Select from Your Frequent Credit Card:</p>
+			<div class="list-group">
+  				<a href="#" class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				XXXX XXXX XXXX 1111</a>
+  				<a href="#" class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				XXXX XXXX XXXX 2222</a>
+  				<a href="#" class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				XXXX XXXX XXXX 3333</a>
+  				<a href="#" class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				XXXX XXXX XXXX 4444</a>
+			</div>
 			<br>
 		</div>
 	</div>

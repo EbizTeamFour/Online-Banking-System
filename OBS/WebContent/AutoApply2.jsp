@@ -72,12 +72,13 @@
 <div class="container-fluid">
 	<div class="row" style="height:160px;background:url(img/bg1.jpg);background-size:100% 300%;background-repeat:no-repeat;">
 		<div class="col-md-3">
-			<a href="">
+			<a href="account.jsp">
 				<img src="img/logo1.png" width=300 height=120>
 			</a>
 		</div>
 		<div class="col-md-9" style="padding-top:10px">
 			<ul class="nav nav-pills" style="float:right">
+				<li class="active"><a style="color:#117ACA;border-color:#117ACA;"><img src="img/chat.png" width=20 height=20> Chat Online</a></li>
 				<li class="active" style="background-color:transparent;"><a href="index.jsp">Sign off</a></li>
 				<li class="active"><a href="#">Language</a></li>
 			</ul>
@@ -118,11 +119,9 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:1030px">
                 <ul class='list-inline'>
-                    <li><a href="#" id="">Pay bill</a>
+                    <li><a href="PayBillIndex.jsp" id="">Pay bill</a>
                     </li>
-                    <li><a href="#" id="">Manage bill</a>
-                    </li>
-                    <li><a href="#" id="">Payment Activity</a>
+                    <li><a href="ManageBillIndex.jsp" id="">Manage bill</a>
                     </li>
                 </ul>
 		</ul>
@@ -134,7 +133,7 @@
 	    </a>
 		<ul class="dropdown-menu" style="width:860px">
                 <ul class='list-inline'>
-                    <li><a href="AutoApply1.jsp" id="">Auto Loan</a>
+                    <li><a href="LoanAccount.jsp" id="">Auto Loan</a>
                     </li>
                     <li><a href="#" id="">Mortgage</a>
                     </li>
@@ -160,7 +159,7 @@
 
 <!--Auto Application Form Starts here  -->
 
-<div class="container-fluid" style="background-color:rgb(233,229,220)">
+<div class="container-fluid" style="background-color:#F5DEB3">
 	<div class="row">
 	<div id="wrapper" class="col-md-3">
         <div id="sidebar-wrapper">
@@ -179,10 +178,11 @@
                             <b class="caret"></b>
                         </a>
                         <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
-                            <li><a href="#"><i class="fa fa-caret-right"></i>Apply for new Auto Loan</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right"></i>Refinance an Auto Loan</a></li>
+                        <li><a href="LoanAccount.jsp"><i class="fa fa-caret-right"></i>Account Summary</a></li>
+								<li><a href="#"><i class="fa fa-caret-right"></i>Schedule an Auto Loan Payment</a></li>
+                            <li><a href="AutoApply1.jsp"><i class="fa fa-caret-right"></i>Apply for new Auto Loan</a></li>
+                            <li><a href="AutoApply1.jsp"><i class="fa fa-caret-right"></i>Refinance an Auto Loan</a></li>
                             <li><a href="#"><i class="fa fa-caret-right"></i>Check Application Status</a></li>
-                            <li><a href="#"><i class="fa fa-caret-right"></i>Schedule an Auto Loan Payment</a></li>
                         </ul>
                     </li>
                     <li>
@@ -279,7 +279,7 @@
                           <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
 					</div>
 				</div>	
-					<button type="button" class="btn btn-lg btn-info">Continue</button>					
+					<a href="AutoApplyConfirm.jsp" type="button" class="btn btn-info">Continue</a>					
 					</div>
 					<br>
 				</form> 

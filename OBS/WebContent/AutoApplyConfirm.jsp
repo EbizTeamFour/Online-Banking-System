@@ -8,7 +8,7 @@
 <script
 	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<title>Auto Loan Application Step 1</title>
+<title>Auto Application Confirmation</title>
 <style>
 @import
 	url('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
@@ -66,8 +66,6 @@
 	color: white;
 }
 </style>
-</head>
-
 <body>
 	<!-- Header  -->
 <div class="container-fluid">
@@ -157,12 +155,11 @@
 	  <li><a href="alert.jsp">Alert and Notification</a></li>
 	</ul>
 </div>
-	<!--Auto Application Form Starts here  -->
-
-	<div class="container-fluid"
-		style="background-color: #F5DEB3">
+	<!--main body start here-->
+	
+	<div class="container-fluid" style="background-color:#F5DEB3">
 		<div class="row">
-			<div id="wrapper" class="col-md-3">
+		<div id="wrapper" class="col-md-3">
 				<div id="sidebar-wrapper">
 					<aside id="sidebar">
 					<ul id="sidemenu" class="sidebar-nav">
@@ -179,10 +176,9 @@
 								role="menu">
 								<li><a href="LoanAccount.jsp"><i class="fa fa-caret-right"></i>Account Summary</a></li>
 								<li><a href="#"><i class="fa fa-caret-right"></i>Schedule an Auto Loan Payment</a></li>
-                            <li><a href="AutoApply1.jsp"><i class="fa fa-caret-right"></i>Apply for new Auto Loan</a></li>
-                            <li><a href="AutoApply1.jsp"><i class="fa fa-caret-right"></i>Refinance an Auto Loan</a></li>
+                            <li><a href="AutoLoanAd.jsp"><i class="fa fa-caret-right"></i>Apply for new Auto Loan</a></li>
+                            <li><a href="AutoLoabAd.jsp"><i class="fa fa-caret-right"></i>Refinance an Auto Loan</a></li>
                             <li><a href="#"><i class="fa fa-caret-right"></i>Check Application Status</a></li>
-								
 							</ul></li>
 						<li><a class="accordion-toggle collapsed toggle-switch"
 							data-toggle="collapse" href="#submenu-3"> <span
@@ -192,95 +188,81 @@
 						</a>
 							<ul id="submenu-3" class="panel-collapse collapse panel-switch"
 								role="menu">
-								<li><a href="#"><i class="fa fa-caret-right"></i>Posts</a></li>
-								<li><a href="#"><i class="fa fa-caret-right"></i>Comments</a></li>
 							</ul></li>
-						<li><a href="#"> <span class="sidebar-icon"><i
-									class="fa fa-database"></i></span> <span class="sidebar-title">Data</span>
-						</a></li>
-						<li><a href="#"> <span class="sidebar-icon"><i
-									class="fa fa-terminal"></i></span> <span class="sidebar-title">Console</span>
-						</a></li>
 					</ul>
 					</aside>
 				</div>
-			</div>
-			<form>
-				<div class="col-md-9"
-					style="margin-left: 25%; padding: 1px 16px; border-top: solid; border-color: #117ACA; background-color: white">
-					<h3 align="center">Auto Loan Application</h3>
-					<h5>Step 1: Your Car Info</h5>
-					<hr>
-
-					<div class="row">
-						<div class="col-sm-6 form-group">
-							<Label>Car Type</Label> <br> <label class="radio-inline"><input
-								type="radio" name="optradio">New Car</label> <label
-								class="radio-inline"><input type="radio" name="optradio">Used
-								Car</label>
-						</div>
-						<div class="col-sm-6 form-group">
-							<label>Year</label> <select class="form-control">
-								<option>2017</option>
-								<option>2016</option>
-								<option>2015</option>
-								<option>2014</option>
-								<option>2013</option>
-								<option>2012</option>
-								<option>2011</option>
-								<option>2010</option>
-								<option>2009</option>
-								<option>2008</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 form-group">
-							<label>Loan Amount</label> <input type="text" placeholder="$"
-								class="form-control">
-						</div>
-						<div class="col-sm-6 form-group">
-							<label>Loan Terms</label> <select class="form-control">
-								<option>24 months</option>
-								<option>36 months</option>
-								<option>72 months</option>
-							</select>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-sm-6 form-group">
-							<label>Car Make</label> <select class="form-control">
-								<option>ACURA</option>
-								<option>ALFA ROMEO</option>
-								<option>ASTON MARTIN</option>
-								<option>AUDI</option>
-								<option>BENTLEY</option>
-								<option>BMW</option>
-								<option>BUICK</option>
-								<option>CADILLAC</option>
-								<option>CHEVROLET</option>
-								<option>CHRYSLER</option>
-								<option>DODGE</option>
-								<option>FERRARI</option>
-								<option>FIAT</option>
-								<option>FORD</option>
-								<option>GENESIS</option>
-								<option>HONDA</option>
-								<option>HYUNDAI</option>
-								<option>INFINITI</option>
-								<option>JAGUAR</option>
-							</select>
-						</div>		
-					</div>
-					<a href="AutoApply2.jsp" class="btn btn-info">Continue</a>
-
-				</div>		
-			</form>
-			<br>
 		</div>
-		<hr>
+		
+		<!-- Confirmation -->
+		<form>
+		<div class="col-md-9" style="margin-left: 25%; padding: 1px 16px; border-top: solid; border-color: #117ACA; background-color: white">
+					<div class="row">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <h2 class="section-heading text-uppercase center" style="color:blue">Thank you for your application!</h2>
+             <h3 class="section-subheading center">Please call us or visit our branch to proceed.</h3>
+            <h5 class="section-subheading text-muted center">Your application reference number: 1FA2FX</h5>
+            <h5>PHONE:</h5>
+            <h4> +1 412.268.6032</h4>
+            <h5>The Nearest Devonshire Branch Address:</h5>
+            <h4> 417 South Craig Street, 2nd Floor Pittsburgh, PA 1521</h4>
+            <br>
+            <hr>
+          </div>
+          <div class="col-md-9">
+          <h3>Estimated Payments and Rates</h3>
+          <hr>
+          </div>
+          
+        </div>
+        <div class="row text-left">
+          <div class="col-xs-3">
+            <h5 class="text">State</h5>
+            <h3 class="service-heading text-muted">PennsyIvania</h3>
+            <br>
+          </div>
+          <div class="col-xs-3">
+            <h5 class="text">Car Type</h5>
+            <h3 class="service-heading text-muted">New INIFINITY QX50</h3>
+            <br>
+          </div>
+          <div class="col-xs-3">
+            <h5 class="text">Loan Amount</h5>
+            <h3 class="service-heading text-muted">$8,000</h3>
+            <br>
+          </div>
+          </div>
+          <div class="row">
+          <div class="col-xs-3">
+            <h5 class="text">Est. Credit</h5>
+            <h3 class="service-heading text-muted">Excellent</h3>
+            <br>
+          </div>
+          <div class="col-xs-3">
+            <h5 class="text">Loan Term</h5>
+            <h3 class="service-heading text-muted">48 Months</h3>
+            <br>
+          </div>
+          <div class="col-xs-3">
+            <h5 class="text">APR</h5>
+            <h3 class="service-heading text-muted">3.24%</h3> 
+            <br>
+          </div>
+          </div>
+          </div>
+        </div>
+        <hr>
+        <br>
+		</form>
+		</div>
+		<br>
 	</div>
-	<!-- Footer  -->
+	</div>
+
+
+<!-- Footer  -->
 	<div class="container:fluid"
 		style="background-color: rgb(245, 245, 245)">
 		<br>

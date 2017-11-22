@@ -7,7 +7,65 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<title>Home Page</title>
+	<title>Manage Bill Payment</title>
+	<style>
+	@import
+		url('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
+
+	#sidebar-wrapper .sidebar-nav {
+		position: absolute;
+		top: 0;
+		width: 95%;
+		font-size: 14px;
+		padding-left: 0;
+		padding-top: 10%;
+		list-style: none;
+	}
+
+	.sidebar-nav li a {
+		display: block;
+		color: #000;
+		padding: 8px 16px;
+		text-decoration: none;
+		background: #428bca !important;
+		color: #fff !important;
+	}
+
+	#sidebar-wrapper .sidebar-nav li a {
+		display: block;
+		text-decoration: none;
+		color: #428bca;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse {
+		list-style: none;
+		-moz-padding-start: 0;
+		-webkit-padding-start: 0;
+		-khtml-padding-start: 0;
+		-o-padding-start: 0;
+		padding-start: 0;
+		padding: 0;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse li i {
+		margin-right: 10px;
+	}
+
+	#sidebar-wrapper .sidebar-nav li ul.panel-collapse li {
+		text-indent: 15px;
+	}
+
+	.sidebar-nav li a.active {
+		background-color: #4CAF50;
+		color: white;
+	}
+
+	.sidebaar-nav li a:hover:not (.active) {
+		background-color: #555;
+		color: white;
+	}
+	
+	</style>
 </head>
 <body>
 <div class="container-fluid">
@@ -97,36 +155,58 @@
 	  <li><a href="alert.jsp">Alert and Notification</a></li>
 	</ul>
 </div>
-<div class="transfer" style="margin-left:30px">
-	<p style="padding-top:10px"><span class="caret"></span> PAYMENT INFORMATION</p>
-		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
-				<div class="form-group">
-					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Send Date</label>
-					<input type="date" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Delivery</label>					
-					<input type="text" class="form-control" value="Standard Delivery (Tuesday, 11/21/2017) - Free" readonly="readonly"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Pay From</label>
-					<select class="form-control" style="padding-left:50px;">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Message</label>
-					<input type="text" class="form-control"/>
-					<br>
-					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_exter_transfer.jsp'">Next Step</button>
-					<br>				
-					<br>
-				</div>
-			</form>
+	<div class="container-fluid" style="background-color:#F5DEB3;">
+		<div class="col-md-3" style="padding-left:0">
+			<div id="sidebar-wrapper">
+				<ul id="sidemenu" class="sidebar-nav" style="width:95%">
+					<li><a href='AddPayee.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-user"></i></span>
+						&nbsp;Add Frequently Used Payees</span>
+						</a>
+					</li>
+					<li><a href='ManagePayee-1.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-user"></i></span>
+						&nbsp;Manage Frequently Used Payees</span>
+						</a>
+					</li>
+					<li><a href='#.jsp'>
+						<span class="sidebar-title">
+						<span class="sidebar-icon"><i class="fa fa-file-text"></i></span>
+						&nbsp;Manage Automatic Bill Payment</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<p style="padding-top:50%"><span class="caret"></span> ACCOUNT BALANCE</p>
+			<div style="background-color:white;width:300px;border-top:solid;border-color:#117ACA">
+				<p>CHECKING ACCOUNT (....XXXX)</p>
+				<p style="margin-bottom:0;text-align:right;font-size:30px;color:#117ACA">$3000.00</p>
+				<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
+			</div>
+			<div style="background-color:rgb(240,235,232);width:300px;">
+				<p>SAVING ACCOUNT (....XXXX)</p>
+				<p style="margin-bottom:0;text-align:right;font-size:30px;">$8000.00</p>
+				<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
+			</div>		
+		</div>	
+	<div class="col-md-9">
+		<div style="height:250px;width:800px;background-color:white;border-top:solid;border-color:#117ACA;margin-top:4%">
+			<br>
+			<p style="text-align: left;font-size:15px;">&nbsp;Please Choose From the Following:</p>
+			<br>
+			<div class="list-group">
+				<a href='AddPayee.jsp' class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				Add Frequently Used Payees</a>
+  				<a href='ManagePayee-1.jsp' class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				Manage Frequently Used Payees</a>
+  				<a href='#.jsp' class="list-group-item list-group-item-action" style="margin-left:5px;width:95%">
+  				Manage Automatic Bill Payment</a>
+			</div>
 		</div>
+	</div>
 </div>
-
 <div class="container:fluid" style="background-color:rgb(245,245,245)">
 	<br>
 	<div style="text-align:center">

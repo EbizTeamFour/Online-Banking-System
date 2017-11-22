@@ -3,11 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Modify Address</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<title>Home Page</title>
 </head>
 <body>
 <div class="container-fluid">
@@ -97,36 +97,62 @@
 	  <li><a href="alert.jsp">Alert and Notification</a></li>
 	</ul>
 </div>
-<div class="transfer" style="margin-left:30px">
-	<p style="padding-top:10px"><span class="caret"></span> PAYMENT INFORMATION</p>
-		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
-				<div class="form-group">
-					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="text" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Send Date</label>
-					<input type="date" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Delivery</label>					
-					<input type="text" class="form-control" value="Standard Delivery (Tuesday, 11/21/2017) - Free" readonly="readonly"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Pay From</label>
-					<select class="form-control" style="padding-left:50px;">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Message</label>
-					<input type="text" class="form-control"/>
-					<br>
-					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_exter_transfer.jsp'">Next Step</button>
-					<br>				
-					<br>
-				</div>
-			</form>
-		</div>
+<div class="container">
+	<div style="height:30px">
+		<a href="profile-1.jsp" style="font-size:20px;padding-top:5px;padding-left:30px">Personal Settings</a>
+	</div>
+	<br>
+	<div class="panel panel-info" style="margin-left:2em;width:100%;float:left">
+	  	<div class="panel-heading">
+	    	<p class="panel-title" style="font-size:15px">New Address</p>
+	  	</div>
+	  	<div class="panel-body" style="padding:0;">
+	  		<div style="border-radius:10px;border-style:solid;border-width:1px;margin:10px 10px 10px 10px">
+	  			<br>
+	  			<img src="img/warning.png" width=30 height=30 style="margin-left:10px"> Please enter your modifications and click Next to proceed:
+	  			<br>
+	  			<br>
+	  		</div>
+	    	<table class="table table-bordered table-hover" >
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>Street Address:</th> 
+	    			<th><input type="text" /></th>
+	    		</tr>
+	    		<tr>
+	    			<th>PO Box: or C/O(If needed): </th>
+	    			<th><input type="text" /></th>
+	    		</tr>
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>City: </th>
+	    			<th><input type="text" /></th>
+	    		</tr>
+	    		<tr>
+	    			<th>State: </th>
+	    			<th> 
+						<select style="width:200px">
+							<option>Select a state</option>
+							<option>Pennsylvania</option>
+						</select>
+	    			</th>
+	    		</tr>
+	    		<tr style="background-color:rgb(233,229,220)">
+	    			<th>Zip: </th>
+	    			<th><input type="text" /></th>
+	    		</tr>
+	    		<tr>
+	    			<th colspan="2">For your online security, please also enter your current OBS password</th>
+	    		</tr>
+	    		<tr>
+	    			<th>Current Password:  </th>
+	    			<th><input type="text" /></th>
+	    		</tr>
+	    	</table>
+	    	<button class="btn btn-info" style="margin-left:20px;width:100px" onclick="{location.href='profile-1-address-confirm.jsp'}">Next</button>
+	    	<br>
+	    	<br>
+	  	</div>
+	</div>
 </div>
-
 <div class="container:fluid" style="background-color:rgb(245,245,245)">
 	<br>
 	<div style="text-align:center">
