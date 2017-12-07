@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -20,7 +21,7 @@
 		<div class="col-md-9" style="padding-top:10px">
 			<ul class="nav nav-pills" style="float:right">
 				<li class="active"><a style="color:#117ACA;border-color:#117ACA;"><img src="img/chat.png" width=20 height=20> Chat Online</a></li>
-				<li class="active" style="background-color:transparent;"><a href="index.jsp">Sign off</a></li>
+				<li class="active" style="background-color:transparent;"><a href="logout.do">Sign off</a></li>
 				<li class="active"><a href="#">Language</a></li>
 			</ul>
 		</div>
@@ -101,50 +102,48 @@
 	<p style="padding-top:10px"><span class="caret"></span> BANK ACCOUNTS</p>
 	<div class="col-md-3" style="padding-left:0">
 		<div style="background-color:white;width:300px;border-top:solid;border-color:#117ACA">
-			<p>CHECKING ACCOUNT (....XXXX)</p>
-			<p style="margin-bottom:0;text-align:right;font-size:30px;color:#117ACA">$3000.00</p>
+			<p>CHECKING ACCOUNT (${cur_account.checkingNumber})</p>
+			<p style="margin-bottom:0;text-align:right;font-size:30px;color:#117ACA">${cur_account.checkingBalance}</p>
 			<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
 		</div>
 		<div style="background-color:rgb(240,235,232);width:300px;">
-			<p>SAVING ACCOUNT (....XXXX)</p>
-			<p style="margin-bottom:0;text-align:right;font-size:30px;">$8000.00</p>
+			<p>SAVING ACCOUNT (${cur_account.savingNumber})</p>
+			<p style="margin-bottom:0;text-align:right;font-size:30px;">${cur_account.savingBalance}</p>
 			<p style="text-align:right;font-size:10px;font-color:grey">Available balance</p>
 		</div>
 		<p style="padding-top:10px"><span class="caret"></span> TRANSFER FUNDS</p>
 		<div style="width:300px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
-				<div class="form-group">
-					<label for="name" style="font-size:18px;padding-top:10px">From</label>
-					<select class="form-control">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<select class="form-control">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="number" class="form-control"/>
-					<br>
-					<button class="btn btn-default" type="button" style="margin-left:80px">Review Transfer</button>
-					<br>
-					<br>
-				</div>
-			</form>
+			<div class="form-group">
+				<label for="name" style="font-size:18px;padding-top:10px">From</label>
+				<select id="fromAccount" class="form-control">
+					<option>Checking Account: ${cur_account.checkingBalance}</option>
+					<option>Saving Account: ${cur_account.savingBalance}</option>
+				</select>
+				<label for="name" style="font-size:18px;padding-top:10px">To</label>
+				<select id="toAccount" class="form-control">
+					<option>Checking Account: ${cur_account.checkingBalance}</option>
+					<option>Saving Account: ${cur_account.savingBalance}</option>
+				</select>
+				<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
+				<input type="number" id="amount" class="form-control"/>
+				<br>
+				<button onclick='window.top.location.href="internal_transfer.jsp?fromAcc="+document.getElementById("fromAccount").value+"&toAcc="+document.getElementById("toAccount").value+"&amountTransfer="+document.getElementById("amount").value' class="btn btn-default" type="button" style="margin-left:80px">Review Transfer</button>
+				<br>
+				<br>
+			</div>
 		</div>
 	</div>
 	<div class="col-md-9">
 		<div style="background-color:white;width:900px;border-top:solid;border-color:#117ACA;border-width:8px">
-			<p>CHECKING ACCOUNT (....XXXX)</p>
+			<p>CHECKING ACCOUNT (${cur_account.checkingNumber})</p>
 			<div class="row" style="padding-left:5px">
 				<div class="col-md-3">
 					<p style="margin-bottom:0;font-size:10px;font-color:grey">Available balance</p>
-					<p style="font-size:30px">$3000.00</p>
+					<p style="font-size:30px">${cur_account.checkingBalance}</p>
 				</div>
 				<div class="col-md-3">
 					<p style="margin-bottom:0;font-size:10px;font-color:grey">Present balance</p>
-					<p style="font-size:30px">$3000.00</p>
+					<p style="font-size:30px">${cur_account.checkingBalance}</p>
 				</div>
 				<div class="col-md-3">
 					<p style="margin-bottom:0;font-size:10px;font-color:grey">Overdraft Protection</p>
@@ -195,34 +194,15 @@
 						<th>Category</th>
 						<th>Amount</th>
 					</tr>
+				<c:forEach var="transaction" items="${history}">
 					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>Checking</th>
-						<th>Services + Supplies</th>
-						<th>-$30.00</th>
+						<td>${transaction.date}</td>
+						<th>${transaction.description}</th>
+						<th>${transaction.transFromAccNum}</th>
+						<th>${transaction.category}</th>
+						<th>${transaction.amount}</th>
 					</tr>
-					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>Checking</th>
-						<th>Services + Supplies</th>
-						<th>-$30.00</th>
-					</tr>
-					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>Checking</th>
-						<th>Services + Supplies</th>
-						<th>-$30.00</th>
-					</tr>
-					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>Checking</th>
-						<th>Services + Supplies</th>
-						<th>-$30.00</th>
-					</tr>
+				</c:forEach>
 				</table>
 				<a href="TransactionHistory.jsp" style="float:right">View full Account Activity</a>
 			</div>

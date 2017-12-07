@@ -93,30 +93,47 @@
 		  	<div class="panel-heading">
 		    	<p class="panel-title" style="font-size:15px">Create Sign-on Credentials</p>
 		  	</div>
+		  	<form method="POST" action="register.do">
+		  	<input type="hidden" name="accountNumber" value="${accountNumber}">
 		  	<div class="panel-body" style="font-weight:bold;">
+		  			DL Online Banking System (OBS) UserID:<br>
+		    		<input type="text" class="form-control" name="userId" style="width:20%"/>
+		    		<br>
 		    		DL Online Banking System (OBS) Password:<br>
-		    		<input type="text" class="form-control" style="width:20%"/>
+		    		<input type="text" class="form-control" name="password" style="width:20%"/>
 		    		<br>
 		    		Confirm Password:<br>
 		    		<input type="text" class="form-control" style="width:20%"/>
 		    		<br>
 		    		Security Question:<br>
-		    		<select class="form-control" style="font-weight:normal;width:450px;">
-					<option>What was the name of your elementary/primary school?</option>
-					<option>What is your pet’s name?</option>
-					<option>What time of the day were you born? (hh:mm)</option>
-					<option>In what city or town does your nearest sibling live?</option>
-					<option>In what year was your father born?</option>
-				</select>		    	
+		    		<select class="form-control" name="securityQuestion1" style="font-weight:normal;width:450px;">
+						<option>What was the name of your elementary/primary school?</option>
+						<option>What is your pet’s name?</option>
+						<option>What time of the day were you born? (hh:mm)</option>
+						<option>In what city or town does your nearest sibling live?</option>
+						<option>In what year was your father born?</option>
+					</select>		    	
 		    		<br>
 		    		Security Answer:<br>
-		    		<input type="text" class="form-control" style="width:450px"/>
+		    		<input type="text" class="form-control" name="securityAnswer1" style="width:450px"/>
 		    		<br>
-		    		<button type="button" class="btn btn-info" style="float:left;width:8%" onClick="{location.href='register_step1.jsp'}">Back</button>
-		    		<button type="button" class="btn btn-info" style="float:right;width:8%" onClick="{location.href='register_step3.jsp'}">Next</button>
+		    		<select class="form-control" name="securityQuestion2" style="font-weight:normal;width:450px;">
+						<option>What was the name of your elementary/primary school?</option>
+						<option>What is your pet’s name?</option>
+						<option>What time of the day were you born? (hh:mm)</option>
+						<option>In what city or town does your nearest sibling live?</option>
+						<option>In what year was your father born?</option>
+					</select>		    	
+		    		<br>
+		    		Security Answer:<br>
+		    		<input type="text" class="form-control" name="securityAnswer2" style="width:450px"/>
+		    		<br>
+		    		<button type="button" class="btn btn-info" style="float:left;width:8%" onClick="{location.href='WEB-INF/register_step1.jsp'}">Back</button>
+		    		<button type="submit" class="btn btn-info" style="float:right;width:8%">Next</button>
 		    		<br>		 
 		    		<br>
 		  	</div>
+		  	</form>
 		</div>
 		
 		<br>

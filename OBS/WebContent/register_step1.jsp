@@ -93,20 +93,22 @@
 		  	<div class="panel-heading">
 		    	<p class="panel-title" style="font-size:15px">Your Information</p>
 		  	</div>
-		  	<div class="panel-body" style="font-weight:bold;">
-		    	Social Security Number (SSN):<br>
-		    	<input type="text" class="form-control" style="width:20%; font-weight:normal;" placeholder="No dashes or spaces"/>
-		    	<br>
-		    	DL Visa Debit Card PIN*:<br>
-		    	<input type="text" class="form-control" style="width:20%; font-weight:normal;" placeholder="4 digits"/>
-		    	<br>
-		    	DL Account Number:<br>
-		    	<input type="text" class="form-control" style="width:20%"/>
-		    	<br>
-		    	<button type="button" class="btn btn-info" style="width:8%" onClick="{location.href='register_step2.jsp'}">Next</button>
-		    	<br>		 
-		    	<br>
-		  	</div>
+		  	<form method="POST" action="registerValid.do">
+			  	<div class="panel-body" style="font-weight:bold;">
+			    	Social Security Number (SSN):<br>
+			    	<input type="text" class="form-control" style="width:20%; font-weight:normal;" name="SSN" placeholder="No dashes or spaces"/>
+			    	<br>
+			    	DL Visa Debit Card PIN*:<br>
+			    	<input type="text" class="form-control" style="width:20%; font-weight:normal;" name="accountPIN" placeholder="4 digits"/>
+			    	<br>
+			    	DL Account Number:<br>
+			    	<input type="text" class="form-control" name="accountNumber" style="width:20%"/>
+			    	<br>
+			    	<button type="submit" class="btn btn-info" style="width:8%" onClick="{location.href='register_step2.jsp'}">Next</button>
+			    	<br>		 
+			    	<br>
+			  	</div>
+		  	</form> 
 		</div>
 		
 		<br>

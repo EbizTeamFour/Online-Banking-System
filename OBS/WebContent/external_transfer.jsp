@@ -100,26 +100,25 @@
 <div class="transfer" style="margin-left:30px">
 	<p style="padding-top:10px"><span class="caret"></span> PAYMENT INFORMATION</p>
 		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
+			<form> 
 				<div class="form-group">
 					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<input type="text" class="form-control"/>
+					<input type="text" class="form-control" id="toAcc"/>
 					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="text" class="form-control"/>
+					<input type="text" class="form-control" id="amount"/>
 					<label for="name" style="font-size:18px;padding-top:10px">Send Date</label>
-					<input type="date" class="form-control"/>
+					<input type="date" class="form-control" id="date" />
 					<label for="name" style="font-size:18px;padding-top:10px">Delivery</label>					
-					<input type="text" class="form-control" value="Standard Delivery (Tuesday, 11/21/2017) - Free" readonly="readonly"/>
+					<input type="text" class="form-control" value="Standard Delivery (${date}) - Free" readonly="readonly"/>
 					<label for="name" style="font-size:18px;padding-top:10px">Pay From</label>
-					<select class="form-control" style="padding-left:50px;">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
+					<select class="form-control" style="padding-left:50px;" id="fromAcc">
+						<option>Checking Account: ${cur_account.checkingBalance}</option>
 					</select>
 					<label for="name" style="font-size:18px;padding-top:10px">Message</label>
-					<input type="text" class="form-control"/>
+					<input type="text" class="form-control" id="message"/>
 					<br>
 					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_exter_transfer.jsp'">Next Step</button>
+					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = 'window.top.location.href="review_exter_transfer.jsp?fromAcc="+document.getElementById("fromAcc").value+"&toAcc="+document.getElementById("toAcc").value+"&amount="+document.getElementById("amount").value+"&date="+document.getElementById("date").value+"&message="+document.getElementById("message").value'>Next Step</button>
 					<br>				
 					<br>
 				</div>

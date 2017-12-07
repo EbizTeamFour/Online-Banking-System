@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -110,7 +111,7 @@
 			<option>Saving Account</option>
 		</select>
 		<br>
-		<p style="font-size:15px;margin-left:20px">Available Balance: $3000.00<br>Present Balance: $3000.00</p>
+		<p style="font-size:15px;margin-left:20px">Available Balance: ${cur_account.checkingBalance}<br>Present Balance: ${cur_account.checkingBalance}</p>
 		<br>
 		</div>
 		<div id="image" style="width: 500px; height: 200px;float:left;margin-left:10em"></div>
@@ -166,108 +167,16 @@
 					<tr>
 					<th><span class="caret"></span>November</th>
 					</tr>
+					<c:forEach var="transaction" items="${history}">
 					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
+						<td>${transaction.date}</td>
+						<th>${transaction.description}</th>
 						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Nov.9</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
 						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
+						<th>${transaction.category}</th>
+						<th>${transaction.amount}</th>
 					</tr>
-					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Nov.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-					<th><span class="caret"></span>October</th>
-					</tr>
-					<tr>
-						<td>Oct.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Oct.9</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Oct.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Oct.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-					<th><span class="caret"></span>September</th>
-					</tr>
-					<tr>
-						<td>Sep.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Sep.9</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Sep.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
-					<tr>
-						<td>Sep.10</td>
-						<th>DEBIT CARD PURCHASE XXXXX8669 VENMO XXXXX4430 NY</th>
-						<th>$30</th>
-						<th></th>
-						<th>Services + Supplies</th>
-						<th>$3000.00</th>
-					</tr>
+					</c:forEach>
 				</table>
 		  </div>
 		</div>

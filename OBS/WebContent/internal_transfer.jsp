@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date"  %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -100,36 +101,54 @@
 <div class="transfer" style="margin-left:30px">
 <p style="padding-top:10px"><span class="caret"></span> TRANSFER FUNDS</p>
 		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
-				<div class="form-group">
-					<label for="name" style="font-size:18px;padding-top:10px">From</label>
-					<select class="form-control">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">To</label>
-					<select class="form-control" style="padding-left:50px;">
-						<option>Checking Account: $3000</option>
-						<option>Saving Account: $8000</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Frequency</label>
-					<select class="form-control">
-						<option>One-Time Only</option>
-						<option>Weekly</option>
-						<option>Monthly</option>
-						<option>Annually</option>
-					</select>
-					<label for="name" style="font-size:18px;padding-top:10px">Date</label>
-					<input type="date" class="form-control"/>
-					<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
-					<input type="text" class="form-control"/>
-					<br>
-					<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
-					<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = "window.location.href = 'review_inter_transfer.jsp'">Next Step</button>
-					<br>				
-					<br>
-				</div>
-			</form>
+			<div class="form-group">
+				<label for="name" style="font-size:18px;padding-top:10px">From</label>
+				<select id="fromAccount" class="form-control">
+				<%String fromAccount = request.getParameter("fromAcc");
+				  if (fromAccount != null) {
+					  %>
+					  <option selected="selected">${param.fromAcc}</option>
+				<%
+				  } else {
+				%>
+					<option>Checking Account: ${cur_account.checkingBalance}</option>
+					<option>Saving Account: ${cur_account.savingBalance}</option>
+				<%
+				  }
+				%>
+				</select>
+				<label for="name" style="font-size:18px;padding-top:10px">To</label>
+				<select id="toAccount" class="form-control" style="padding-left:50px;">
+				<%String toAccount = request.getParameter("toAcc");
+				  if (toAccount != null) {
+					  %>
+					  <option selected="selected">${param.toAcc}</option>
+				<%
+				  } else {
+				%>
+					<option>Checking Account: ${cur_account.checkingBalance}</option>
+					<option>Saving Account: ${cur_account.savingBalance}</option>
+				<%
+				  }
+				%>
+				</select>
+				<label for="name" style="font-size:18px;padding-top:10px">Frequency</label>
+				<select id="frequency" class="form-control">
+					<option>One-Time Only</option>
+					<option>Weekly</option>
+					<option>Monthly</option>
+					<option>Annually</option>
+				</select>
+				<label for="name" style="font-size:18px;padding-top:10px">Date</label>
+				<input id="date" type="date" class="form-control"/>
+				<label for="name" style="font-size:18px;padding-top:10px">Amount</label>
+				<input id="amount" type="text" class="form-control" value="${param.amountTransfer}"/>
+				<br>
+				<button class="btn btn-primary" type="button" style="float:left;width:15%" onclick = "window.location.href = 'index.jsp'">Back</button>
+				<button class="btn btn-primary" type="button" style="float:right;width:15%" onclick = 'window.top.location.href="review_inter_transfer.jsp?fromAcc="+document.getElementById("fromAccount").value+"&toAcc="+document.getElementById("toAccount").value+"&amountTransfer="+document.getElementById("amount").value+"&dateTransfer="+document.getElementById("date").value+"&freq="+document.getElementById("frequency").value'>Next Step</button>
+				<br>				
+				<br>
+			</div>
 		</div>
 </div>
 

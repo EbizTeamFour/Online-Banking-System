@@ -94,23 +94,26 @@
 		    	<p class="panel-title" style="font-size:15px">Your Information</p>
 		  	</div>
 		  	<div class="panel-body">
-		    <strong>	Social Security Number (SSN):</strong> 
-		    	<span style="position:relative;margin-left:150px;">XXXXX1234</span>
-		    	<br><br>
-		    	<strong>	DL Visa Debit Card PIN*:</strong> 
-		    	<span style="position:relative;margin-left:190px;">***4</span>
-		    	<br><br>
 		    	<strong>	DL Account Number:</strong> 
-		    	<span style="position:relative;margin-left:213px;">******24</span>
+		    	<span style="position:relative;margin-left:230px;">${cur_user.accountNumber}</span>
+		    	<br><br>
+		    	<strong>	DL OBS UserId:</strong> 
+		    	<span style="position:relative;margin-left:265px;">${cur_user.userId}</span>
 		    	<br><br>
 		    	<strong>	DL OBS Password:</strong> 
-		    	<span style="position:relative;margin-left:227px;">******</span>
+		    	<span style="position:relative;margin-left:240px;">${cur_user.password}</span>
 		    	<br><br>
-		    	<strong>	Security Question:</strong> 
-		    	<span style="position:relative;margin-left:230px;">In what city or town does your nearest sibling live?</span>
+		    	<strong>	Security Question 1:</strong> 
+		    	<span style="position:relative;margin-left:230px;">${cur_user.securityQuestion1}</span>
 		    	<br><br>
-		    	<strong>	Security Answer:</strong> 
-		    	<span style="position:relative;margin-left:240px;">Pittsburgh</span>
+		    	<strong>	Security Answer 1:</strong> 
+		    	<span style="position:relative;margin-left:240px;">${cur_user.securityAnswer1}</span>
+		    	<br><br>
+		    	<strong>	Security Question 2:</strong> 
+		    	<span style="position:relative;margin-left:230px;">${cur_user.securityQuestion2}</span>
+		    	<br><br>
+		    	<strong>	Security Answer 2:</strong> 
+		    	<span style="position:relative;margin-left:240px;">${cur_user.securityAnswer2}</span>
 			   
 		    	<br><br>
 		    	<button type="button" class="btn btn-info" style="float:left;width:8%" onClick="{location.href='register_step3.jsp'}">Back</button>

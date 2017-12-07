@@ -8,7 +8,7 @@
 <script
 	src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<title>Auto Loan Account Summary</title>
+<title>Auto Loan Payment Step 1</title>
 <style>
 @import
 	url('//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
@@ -203,128 +203,39 @@
 		</div>
 		
 		<!-- Account Summary -->
-		<form>
+
 				<div class="col-md-9"
 					style="margin-left: 25%; padding: 1px 16px; border-top: solid; border-color: #117ACA; background-color: white">
 					<div class="row">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
-            <h4 class="section-heading text-uppercase">Taylor Swift's Auto Loan Account</h4>
-            <h5 class="section-subheading">2016 INFINITI QX50</h5>
-            <h5 class="section-subheading text-muted">VIN:1FAHP2FW6BG1189XXX</h5>
+            <h4 class="section-heading text-uppercase">Step 3 of 3:</h4>
+            <h5 class="section-subheading">Scheduled Payment</h5>
             <hr>
           </div>
           
         </div>
         <div class="row text-left">
-          <div class="col-xs-3">
-            <h5 class="text">Most Recent Payment</h5>
-            <h3 class="service-heading">$2,000.00</h3>
-            <p class="text-muted">Received on 12/12/2017</p>
-            <a href="#" class="btn btn-info">Payment history</a>
-            <br>
+        <h5 class="text col-md-9" style="color:blue;">Payment Amount</h5>
+          <div class="col-xs-9">     
+            <p>Your Payment of $255.58 is scheduled on 12/30/2017!</p>
           </div>
-          <div class="col-xs-3">
-            <h5 class="text">Next Payment Due</h5>
-            <h3 class="service-heading">$255.58</h3>
-            <p class="text-muted">Due on 01/12/2018</p>
-            <a href="MakeLoanPayment1.jsp" class="btn btn-info">Make a payment</a>
-            <br>
+          <div class="col-md-9">
+          <p>Thank you!</p>
+            <hr>
           </div>
-          <div class="col-xs-3">
-            <h5 class="text">Account Balance</h5>
-            <h3 class="service-heading">$2,069.56</h3>
-            <p class="text-muted">Maturity Date: 10/12/2019</p>  
-            <br>
-          </div>
-          
-          
-        </div>
-        <hr>
-        <br>
-        <div class="row">
         <div class="col-md-9">
-		<div class="panel panel-default" style="width:97%;margin-left:auto; margin-right:auto;border:solid">
-		  <div class="panel-heading">
-		  	RECENT PAYMENTS
-		  	<div style="float:right">
-				<a>Search</a> | <a>Export</a> | <a>Print</a>
-		  	</div>
-		  </div>	
-		  <!-- Table -->
-		  <div class="table-responsive">
-				<table class="table table-bordered table-hover">
-					<tr style="background-color:rgb(72,83,93);color:white">
-						<th>Date</th>
-						<th>Description</th>
-						<th>Payment</th>
-						<th>Principal</th>
-						<th>Interest</th>
-						<th>Balance</th>
-					</tr>
-					<tr>
-						<td>Dec.12, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($2,000.00)</th>
-						<th>($1,995.08)</th>
-						<th>($4.92)</th>
-						<th>$2,069.56</th>
-					</tr>
-					<tr>
-						<td>Nov.12, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($255.58)</th>
-						<th>($175.95)</th>
-						<th>($79.63)</th>
-						<th>$4064.64</th>
-					</tr>
-					<tr>
-						<td>Oct.11, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($255.58)</th>
-						<th>($175.33)</th>
-						<th>($80.25)</th>
-						<th>$4,240.59</th>
-					</tr>
-					<tr>
-						<td>Sep.12, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($255.58)</th>
-						<th>($169.47)</th>
-						<th>($86.11)</th>
-						<th>$4,415.92</th>
-					</tr>
-					<tr>
-						<td>Aug.12, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($255.58)</th>
-						<th>($169.18)</th>
-						<th>($86.40)</th>
-						<th>$4,585.39</th>
-					</tr>
-					<tr>
-						<td>July.12, 2017</td>
-						<th>Auto Loan Payment</th>
-						<th>($255.58)</th>
-						<th>($163.23)</th>
-						<th>($92.35)</th>
-						<th>$4,754.57</th>
-					</tr>
-
-				</table>
-		  </div>
-		</div>
-		<br>
+              <a href="LoanAccount.jsp" class="btn btn-info">Go to Account Summary</a>
         </div>
+        <div class="col-md-9"><br></div>
         </div>
+        </div>   
       </div>
 					</div>				
 				</div>
-				<br>
-			
+				<br>	
 		</form>
-		
 </div>
 		</div>
 		<br>

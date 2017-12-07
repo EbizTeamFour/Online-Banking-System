@@ -120,7 +120,7 @@
 		    		</div>
 		    		<br><br>
 		    		<button type="button" class="btn btn-info" style="margin-left:90px;float:left;width:8%" onClick="{location.href='register_step2.jsp'}">Back</button>
-		    		<button type="button" class="btn btn-info" style="margin-right:90px;float:right;width:8%" onClick="{location.href='register_step4.jsp'}">Accept</button>
+		    		<a href="register_step4.jsp"><button type="button" class="btn btn-info" style="margin-right:90px;float:right;width:8%">Accept</button></a>
 		    		<br>		 
 		    		<br>
 		    		

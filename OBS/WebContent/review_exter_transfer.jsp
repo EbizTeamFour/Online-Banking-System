@@ -100,29 +100,34 @@
 <div class="transfer" style="margin-left:30px">
 	<p style="padding-top:10px"><span class="caret"></span> REVIEW TRANSFER</p>
 		<div style="width:800px;background-color:white;border-top:solid;border-color:#117ACA">
-			<form>
+			<form method="POST" action="externalTransfer.do">
 				<div class="form-group">
 					<label for="name" style="font-size:18px;padding-top:10px">From:</label>
-					<span style="padding-left:180px">Checking Account - XXXXXX1234  Avail Bal: $1000.00</span>
+					<span style="padding-left:180px">${param.fromAcc}</span>
+					<input type="hidden" name="fromAcc" value="${param.fromAcc}" />
 					<br>
 					<label for="name" style="font-size:18px;padding-top:10px">To:</label>
-					<span style="padding-left:205px">Xuan Liu (xuanliu@andrew.cmu.edu)</span>
+					<span style="padding-left:205px">${param.toAcc}</span>
+					<input type="hidden" name="toAcc" value="${param.toAcc}" />
 					<br>
 					<label for="name" style="font-size:18px;padding-top:10px">Amount:</label>
-					<span style="padding-left:158px">$ 100.00</span>
+					<span style="padding-left:158px">${param.amount}</span>
+					<input type="hidden" name="amount" value="${param.amount}" />
 					<br>
 					<label for="name" style="font-size:18px;padding-top:10px">Date:</label>
-					<span style="padding-left:182px">11/15/2017</span>	
+					<span style="padding-left:182px">${param.date}</span>	
+					<input type="hidden" name="date" value="${param.date}" />
 					<br>
 					<label for="name" style="font-size:18px;padding-top:10px">Frequency:</label>
 					<span style="padding-left:134px">One Time Only</span>
 					<br>		
 					<label for="name" style="font-size:18px;padding-top:10px">Message:</label>
-					<span style="padding-left:147px">Have a nice day :)</span>
+					<span style="padding-left:147px">${param.message}</span>
+					<input type="hidden" name="message" value="${param.message}" />
 					<br>			
 					<br>
 					<button class="btn btn-default" type="button" style="float:left;width:15%" onclick = "window.location.href = 'internal_transfer.jsp'">Back</button>
-					<button class="btn btn-default" type="button" style="float:right;width:15%" href="#">Submit</button>
+					<button class="btn btn-default" type="submit" style="float:right;width:15%">Submit</button>
 					<br>
 					<br>
 				</div>

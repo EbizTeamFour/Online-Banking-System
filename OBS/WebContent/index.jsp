@@ -23,15 +23,17 @@
 		    	<p class="panel-title" style="font-size:15px">Enter your User ID and Password</p>
 		  	</div>
 		  	<div class="panel-body">
+		  	<form method="POST" action="login.do">
 		    	User ID:<br>
-		    	<input type="text" />
+		    	<input type="text" name="userId"/>
 		    	<br>
 		    	Password:<br>
-		    	<input type="text" />
+		    	<input type="password" name="password"/>
 		    	<br>
 		    	<a href="#">Forget User ID or Password</a>
 		    	<br>
-		    	<button type="button" class="btn btn-info" onClick="{location.href='account.jsp'}">Sign On</button>
+		    	<button type="submit" class="btn btn-info">Sign On</button>
+		    </form>
 		    	<br>
 		    	Enroll in Online Banking:<br>
 		    	<a href="register_step1.jsp">New User Registration</a>
